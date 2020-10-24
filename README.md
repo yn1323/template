@@ -1,83 +1,78 @@
-# react-cordova-template
+# Use
 
-## Installation
-### Required
-```
-npm install -g degit
-npm install -g cordova
-# keytool, emulator so on...
-```
+- [Next.js](https://nextjs.org/) ([React](https://ja.reactjs.org/))
+- [TypeScript](https://www.typescriptlang.org/)
+- [PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps) ([next-offline](https://github.com/hanford/next-offline))
+- [styled-components](https://styled-components.com/) + [styled-media-query](https://github.com/morajabi/styled-media-query)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [EditorConfig](https://editorconfig.org/) + [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+- [Jest](https://jestjs.io/ja/) + [React Testing Library](https://testing-library.com/)
+- [Stroybook](https://storybook.js.org/)
+  - addons
+    - [knobs](https://github.com/storybookjs/storybook/tree/master/addons/knobs)
+    - [actions](https://github.com/storybookjs/storybook/tree/master/addons/actions)
+    - [storysource](https://github.com/storybookjs/storybook/tree/master/addons/storysource)
+    - [viewport](https://github.com/storybookjs/storybook/tree/master/addons/viewport)
+    - [storyshots](https://github.com/storybookjs/storybook/tree/master/addons/storyshots)
+    - [backgrounds](https://github.com/storybookjs/storybook/tree/master/addons/backgrounds)
+    - [console](https://github.com/storybookjs/storybook-addon-console)
+    - [links](https://github.com/storybookjs/storybook/tree/master/addons/links)
+- [Husky](https://github.com/typicode/husky)
 
-### Get Started
-Installation
-```
-npx degit yn1323/react-cordova-template <app-name>
-cd <app-name>
-npm install
-cd app
-npm install
-```
+# Command
 
-Platform
-```
-cordova platfom add android
-cordova platform add ios
-```
+```sh
+# dev
+npm run dev
 
-Change permission to run bat
-```
-npm run chmod
-```
+# build
+npm run build
 
-Change display name in package.json
-
-## Debug
-### Debug in browser
-```
-cd app
+# start
 npm run start
 ```
 
-### Debug in device
-```
-npm run build
-cordova emulate android or ios
-```
+## Storybook
+```sh
+npm run storybook
 
-## Release
-
-### First time only
-#### Create Key
-```
-npm run createkey <Alias>
+# build
+npu run build-storybook
 ```
 
-#### Check Key(when forgot alias)
-```
-npm run keycheck <Password>
-```
+## Lint
+```sh
+npm run lint
 
-### Every release
-
-### Create Release apk
-```
-npm run release--android <Alias>
-npm run release--ios <Alias>
+# auto fix
+npm run lint -- --fix
 ```
 
-### Path to APK
-- apk
+## Test
+```sh
+npm test
 
-# Others
-## Icon
+# watch
+npm test -- --watch
 
-[App Iconizer - Icon Generator](https://appiconizer.com/)
+# update snapshot
+npm test -- -u -t="[TargetName]"
 
-| Resolution  | Icon size |
-|:------- | --------------:|
-| ldpi    |        36 x 36 |
-| mdpi    |        48 x 48 |
-| hdpi    |        72 x 72 |
-| xhdpi   |        96 x 96 |
-| xxhdpi  |      144 x 144 |
-| xxxhdpi |      192 x 192 |
+# update snapshot all
+npm test -- -u
+
+# coverage
+npm test -- --coverage
+```
+
+## Image Snapshot
+```sh
+# image snapshot (run while storybook running)
+npm run puppeteer-storyshots
+
+# update image snapshot (run while storybook running)
+npm run puppeteer-storyshots -- -u -t="[TargetName]"
+
+# update image snapshot all (run while storybook running)
+npm run puppeteer-storyshots -- -u
+```

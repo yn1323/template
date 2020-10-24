@@ -1,36 +1,98 @@
 {
-  "name": "react.cordova.template",
-  "displayName": "HelloCordova",
-  "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "main": "index.js",
+  "name": "template-nextjs",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "chmod": "chmod 755 ./bat/*",
-    "build": "bat/build.sh",
-    "checkkey": "bat/checkkey.sh",
-    "createkey": "bat/createkey.sh",
-    "release--android": "bat/release-android.sh",
-    "release--ios": "bat/release-ios.sh"
-  },
-  "keywords": [
-    "ecosystem:cordova"
-  ],
-  "author": "Apache Cordova Team",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "cordova-plugin-whitelist": "^1.3.4"
-  },
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-whitelist": {}
-    },
-    "platforms": [
-      "ios",
-      "android"
-    ]
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
-    "cordova-android": "9.0.0",
-    "cordova-ios": "6.1.1"
+    "next": "9.3.0",
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@reduxjs/toolkit": "^1.2.5",
+    "@testing-library/react": "^10.0.0",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.1",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react-app": "^9.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-css-modules": "^2.1.0",
+    "jest-dom": "^4.0.0",
+    "next-offline": "^5.0.0",
+    "prettier": "^2.1.2",
+    "react-redux": "^7.2.0",
+    "react-test-renderer": "^16.13.0",
+    "redux-logger": "^3.0.6",
+    "sanitize.css": "^11.0.0",
+    "styled-components": "^5.0.1",
+    "styled-media-query": "^2.1.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "rangeStart": 0,
+    "filepath": "none",
+    "requirePragma": false,
+    "insertPragma": false,
+    "proseWrap": "preserve",
+    "htmlWhitespaceSensitivity": "css",
+    "vueIndentScriptAndStyle": false,
+    "endOfLine": "lf"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
