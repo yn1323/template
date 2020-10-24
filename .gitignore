@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+public/bundle.*
+package-lock.json
+yarn.lock
+coverage
+test/e2e/videos
+test/e2e/screenshots
