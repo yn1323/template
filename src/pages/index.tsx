@@ -9,7 +9,10 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main>hoge</main>
+    <main>
+      hoge
+      {process.env.endpoint}
+    </main>
 
     {/* <footer></footer> */}
   </div>
