@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "react",
     "allowJs": true,
     "esModuleInterop": true,
