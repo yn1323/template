@@ -14,8 +14,16 @@ Installation
 npx degit yn1323/react-cordova-template <app-name>
 cd <app-name>
 npm install
+npx degit yn1323/template#react app
 cd app
 npm install
+```
+
+HTML  
+/app/public/index.html
+Add below inside body tag
+```html
+<script type="text/javascript" src="cordova.js"></script>
 ```
 
 Platform
