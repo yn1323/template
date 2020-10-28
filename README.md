@@ -1,5 +1,7 @@
 ## Templates
 
+### React
+`npx degit yn1323/template#react <app-name>`
 
 ### React x Cordova
 `npx degit yn1323/template#react-cordova <app-name>`
