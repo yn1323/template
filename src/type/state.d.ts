@@ -2,7 +2,6 @@ import * as PreloadState from 'src/store'
 import 'react-redux'
 
 declare module 'react-redux' {
-  // useSelectorなどを使いやすくするための設定
   interface DefaultRootState extends PreloadState {
     [key: string]: any
   }
@@ -10,4 +9,7 @@ declare module 'react-redux' {
   export function useStore<S = DefaultRootState>(): Store<S, Actions>
 }
 
-declare module 'common' {}
+export interface State extends PreloadState {
+  [key: string]: any
+}
+export type SelectionState = PreloadState.SelectionState

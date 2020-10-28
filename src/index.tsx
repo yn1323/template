@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import store from 'src/store'
 import { BrowserRouter } from 'react-router-dom'
 import Sample from 'src/page/Sample'
 import registerServiceWorker from 'src/reagisterServiceWorker'
@@ -8,10 +10,11 @@ import 'src/asset/scss/index.scss'
 const run = () => {
   ReactDOM.render(
     <React.StrictMode>
-      <BrowserRouter>
-        <Sample test="test string" />
-        <div>hoge</div>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Sample test="test" />
+        </BrowserRouter>
+      </Provider>
     </React.StrictMode>,
     document.getElementById('root')
   )
