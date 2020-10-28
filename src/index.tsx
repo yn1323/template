@@ -10,14 +10,12 @@ const run = () => {
       <div>hoge</div>
     </React.StrictMode>,
     document.getElementById('root')
-  );
-  registerServiceWorker();
-};
+  )
+  registerServiceWorker()
+}
 
-
-
-if(window.hasOwnProperty('cordova')){
-  document.addEventListener('deviceready', run, false);
-}else{
+if (window.hasOwnProperty('cordova')) {
+  document.addEventListener('deviceready', run, false)
+} else {
   run()
 }
