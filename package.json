@@ -48,6 +48,14 @@
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2",
     "redux-logger": "^3.0.6",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.3.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0",
     "typescript": "^3.7.5"
   },
   "lint-staged": {

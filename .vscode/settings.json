@@ -1,8 +1,6 @@
 {
-  "css.validate": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "stylelint.enable": false,
   "typescript.tsserver.trace": "verbose",
   "[markdown]": {
     "files.trimTrailingWhitespace": false
@@ -11,6 +9,7 @@
     "source.fixAll.eslint": true,
     "codeActionsOnSaveTimeout": true,
     "editor.codeActionsOnSaveTimeout": true,
+    "source.fixAll.stylelint": true
   },
   "[javascriptreact]": {
     "editor.formatOnSave": true,
@@ -29,5 +28,9 @@
     "rules": {
       "variable.defaultLibrary": "#66d9ef"
     }
-  }
+  },
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
 }
