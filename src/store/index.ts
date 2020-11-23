@@ -2,6 +2,7 @@ import { combineReducers } from 'redux'
 import { configureStore } from '@reduxjs/toolkit'
 import logger from 'redux-logger'
 
+import { isProduction } from 'src/constant'
 import sample from 'src/store/sample'
 
 const reducer = combineReducers({
@@ -11,9 +12,12 @@ const reducer = combineReducers({
 // getDefaultMiddleware: serializeエラーがスマホで発生するため
 const store = configureStore({
   reducer,
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({ serializableCheck: false }).concat(logger),
-  devTools: process.env.NODE_ENV !== 'production',
+  middleware: getDefaultMiddleware => {
+    return isProduction
+      ? getDefaultMiddleware({ serializableCheck: false })
+      : getDefaultMiddleware({ serializableCheck: false }).concat(logger)
+  },
+  devTools: isProduction,
 })
 
 export default store
