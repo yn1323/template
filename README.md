@@ -64,6 +64,8 @@ const history = createHashHistory()
 - name
 - widget#id
 - description
+- author
+- etc
 
 
 #### Platform (After fix config.xml)
