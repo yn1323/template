@@ -9,7 +9,7 @@ npm install -g cordova
 ```
 
 ### Get Started
-Installation
+#### Installation
 ```
 npx degit yn1323/react-cordova-template <app-name>
 cd <app-name>
@@ -19,25 +19,58 @@ cd app
 npm install
 ```
 
-HTML  
+#### HTML  
 /app/public/index.html
 Add below inside body tag
 ```html
 <script type="text/javascript" src="cordova.js"></script>
 ```
 
-Platform
-```
-cordova platfom add android
-cordova platform add ios
-```
-
-Change permission to run bat
+#### Change permission to run bat
 ```
 npm run chmod
 ```
 
-Change display name in package.json
+#### Change display name in package.json
+
+#### Use React-router
+Sample when using `npx degit yn1323/template#react <app-name>`  
+/app/src.index.tsx
+```tsx
+// Add
+import createBrowserHistory from 'history/createBrowserHistory'
+const history = createHashHistory()
+// Replace
+<BrowserrRuter/> -> <Router history={history}/>
+// Enclose with Suspence (Example)
+<Provider store={store}>
+  <Suspense fallback={<div>Loading...</div>}>
+    <Router history={history}>
+      <Index />
+    </Router>
+  </Suspense>
+</Provider>
+```
+/app/src/route/index.tsx
+```tsx
+<Route exact path="/" component={Top} /> // url for debug
+<Route exact path="./index.html" component={Top} /> // url for using cordova
+```
+
+#### config.xml
+#### Add Icon
+- platform > icon
+#### Change
+- name
+- widget#id
+- description
+
+
+#### Platform (After fix config.xml)
+```
+cordova platfom add android
+cordova platform add ios
+```
 
 ## Debug
 ### Debug in browser
@@ -79,7 +112,8 @@ npm run release--ios <Alias>
 # Others
 ## Icon
 
-[App Iconizer - Icon Generator](https://appiconizer.com/)
+[App Icon Generator](https://appicon.co/)
+[IMB Mobile Foundation docs](https://mobilefirstplatform.ibmcloud.com/tutorials/ja/foundation/8.0/application-development/cordova-apps/adding-images-and-icons/)
 
 | Resolution  | Icon size |
 |:------- | --------------:|
@@ -89,3 +123,6 @@ npm run release--ios <Alias>
 | xhdpi   |        96 x 96 |
 | xxhdpi  |      144 x 144 |
 | xxxhdpi |      192 x 192 |
+
+## Memo
+- Network in emulator does not work. Connect to 10.0.2.2 of localhost ?

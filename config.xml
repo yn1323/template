@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+<widget id="io.cordova.sample" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>sample</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -17,6 +17,11 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon density="dpi" src="res/icons/android/mipmap-hdpi/ic_launcher.png" />
+        <icon density="mdpi" src="res/icons/android/mipmap-mdpi/ic_launcher.png" />
+        <icon density="xhdpi" src="res/icons/android/mipmap-xhdpi/ic_launcher.png" />
+        <icon density="xxhdpi" src="res/icons/android/mipmap-xxhdpi/ic_launcher.png" />
+        <icon density="xxxhdpi" src="res/icons/android/mipmap-xxxhdpi/ic_launcher.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
