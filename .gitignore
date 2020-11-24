@@ -8,5 +8,5 @@ node_modules/
 /platforms/
 
 # Genereted after release build
-/apk/
+/apk/*
 .keystore
