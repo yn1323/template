@@ -38,11 +38,11 @@ Sample when using `npx degit yn1323/template#react <app-name>`
 /app/src.index.tsx
 ```tsx
 // Add
-import createBrowserHistory from 'history/createBrowserHistory'
+import createHashHistory from 'history/createHashHistory'
 const history = createHashHistory()
 // Replace
 <BrowserrRuter/> -> <Router history={history}/>
-// Enclose with Suspence (Example)
+// Enclose with Suspense (Example)
 <Provider store={store}>
   <Suspense fallback={<div>Loading...</div>}>
     <Router history={history}>
@@ -59,7 +59,7 @@ const history = createHashHistory()
 
 #### config.xml
 #### Add Icon
-- platform > icon
+- /res/icons/android (useful website is in OTHERS)
 #### Change
 - name
 - widget#id
