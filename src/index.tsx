@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import store from 'src/store'
 import { BrowserRouter } from 'react-router-dom'
-import Sample from 'src/page/Sample'
+import Index from 'src/page/Index'
 import registerServiceWorker from 'src/reagisterServiceWorker'
 import 'src/asset/scss/index.scss'
 
@@ -12,7 +12,7 @@ const run = () => {
     <React.StrictMode>
       <Provider store={store}>
         <BrowserRouter>
-          <Sample test="test" />
+          <Index />
         </BrowserRouter>
       </Provider>
     </React.StrictMode>,

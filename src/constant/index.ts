@@ -1,2 +1,2 @@
-export const test = ''
-export const isProduction = process.env.NODE_ENV === 'production'
+export * from 'src/constant/common'
+export * from 'src/constant/ui'

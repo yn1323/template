@@ -10,7 +10,6 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   env: {node: true, es6: true},
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
@@ -22,6 +21,10 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'react/display-name': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    'no-irregular-whitespace': 'off'
+    'no-irregular-whitespace': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/ban-types': 'off',
   }
-};
+}

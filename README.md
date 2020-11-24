@@ -1,5 +1,7 @@
 # React Template
 
+## Service Worker
+1. Cordova使用時は、 ２４，２５,26行目を修正すること
 ## Stateを追加するときは。。。
 1. src/store内に新規ファイルを作成
 1. src/store/index.tsを修正
