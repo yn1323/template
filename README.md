@@ -11,7 +11,7 @@ npm install -g cordova
 ### Get Started
 #### Installation
 ```
-npx degit yn1323/react-cordova-template <app-name>
+npx degit yn1323/template#react-cordova <app-name>
 cd <app-name>
 npm install
 npx degit yn1323/template#react app
