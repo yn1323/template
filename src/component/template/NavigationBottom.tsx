@@ -12,7 +12,7 @@ interface Icon {
   path: string
 }
 
-export default () => {
+export const NavigationBottom = () => {
   const history = useHistory()
   const location = useLocation()
   const paths = [
@@ -53,3 +53,5 @@ export default () => {
     </BottomNavigation>
   )
 }
+
+export default NavigationBottom

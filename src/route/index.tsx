@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 const Top = lazy(() => import('src/page/Top'))
 const NotFound = lazy(() => import('src/page/404'))
 
-export default () => {
+export const Router = () => {
   return (
     <Switch>
       <Route exact path="/" component={Top} />
@@ -16,3 +16,5 @@ export default () => {
     </Switch>
   )
 }
+
+export default Router

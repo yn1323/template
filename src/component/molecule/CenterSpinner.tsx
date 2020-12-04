@@ -5,7 +5,7 @@ import Centering from 'src/component/template/Centering'
 interface Props {
   text?: string
 }
-export default ({ text = '' }: Props) => {
+export const CenterSpinner = ({ text = '' }: Props) => {
   return (
     <Centering direction="column">
       <>
@@ -17,3 +17,5 @@ export default ({ text = '' }: Props) => {
     </Centering>
   )
 }
+
+export default CenterSpinner

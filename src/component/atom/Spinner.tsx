@@ -1,6 +1,8 @@
 import React from 'react'
 import Spinner from 'react-md-spinner'
 
-export default () => {
+export const Spin = () => {
   return <Spinner />
 }
+
+export default Spin

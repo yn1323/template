@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default () => {
+export const NoPage = () => {
   return <div>404aaaaaaaaa</div>
 }
+
+export default NoPage

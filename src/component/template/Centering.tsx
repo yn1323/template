@@ -6,7 +6,7 @@ interface Props {
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
 }
 
-export default ({ children, direction = 'row' }: Props) => {
+export const Centering = ({ children, direction = 'row' }: Props) => {
   return (
     <Grid
       container
@@ -20,3 +20,5 @@ export default ({ children, direction = 'row' }: Props) => {
     </Grid>
   )
 }
+
+export default Centering
