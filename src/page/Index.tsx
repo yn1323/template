@@ -7,7 +7,9 @@ import Spinner from 'src/component/molecule/CenterSpinner'
 import NavigationTop from 'src/component/template/NavigationTop'
 import NavigationBottom from 'src/component/template/NavigationBottom'
 
-export default () => {
+// export default () => JSX では、fast refreshが効かないことがある
+
+export const Index = () => {
   // buildすると、なぜかRoute内にpyが付与されるので、分岐を追加
   const padding = process.env.NODE_ENV === 'production' ? 0 : 6
 
@@ -23,3 +25,5 @@ export default () => {
     </>
   )
 }
+
+export default Index
