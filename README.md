@@ -18,3 +18,7 @@
       - organisms・・・Render Propでmolecule, atomを描画+データ管理
       - template・・・お好きにどうぞ
       - page・・・router指定先
+
+## QA
+1. ts6142が発生
+   - https://github.com/facebook/create-react-app/issues/10144
