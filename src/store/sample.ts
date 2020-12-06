@@ -1,25 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { Sample as StateType } from 'State'
 
-export type SampleState = {
-  id: string
-}
+const STORE_NAME = 'sample'
 
-export const empty: SampleState = {
+export const defaultVal: StateType = {
   id: '',
 }
 
-export const createSample = (): SampleState => ({ id: 'sample' })
+export const createSample = (): StateType => ({ id: 'sample' })
 
-const initialState: SampleState = {
-  ...empty,
+const initialState: StateType = {
+  ...defaultVal,
 }
 
 const State = createSlice({
-  name: 'edit',
+  name: STORE_NAME,
   initialState,
   reducers: {
-    reset: () => ({ ...empty }),
-    update: (state: SampleState, { payload }) => ({ ...state, ...payload }),
+    reset: () => ({ ...defaultVal }),
+    update: (state: StateType, { payload }) => ({ ...state, ...payload }),
   },
 })
 

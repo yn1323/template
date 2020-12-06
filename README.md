@@ -22,3 +22,8 @@
 ## QA
 1. ts6142が発生
    - https://github.com/facebook/create-react-app/issues/10144
+1. Fast Refreshでブラウザが更新されない
+   - Fast Refreshをoffにする
+   - https://github.com/facebook/create-react-app/issues/10078
+1. 構文エラーチェックが遅い
+   - VSCodeのワークスペースに保存して使うと早くなるかも

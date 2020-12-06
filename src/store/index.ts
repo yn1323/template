@@ -21,6 +21,3 @@ const store = configureStore({
 })
 
 export default store
-
-// typeで使用
-export * from 'src/store/sample'
