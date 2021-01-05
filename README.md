@@ -81,7 +81,7 @@ cordova platform add ios
 
 ---
 
-## Get Started with Cordova x Phenut(Phina.js)
+## Get Started with Cordova x Pheanut(Phina.js)
 - [Pheanut](https://github.com/yn1323/pheanut)
 #### Installation
 ```
