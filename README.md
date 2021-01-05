@@ -1,4 +1,7 @@
-# react-cordova-template
+# cordova-combination
+
+- Cordova x React
+- Cordova x Pheanut(Phina.js)
 
 ## Installation
 ### Required
@@ -8,10 +11,12 @@ npm install -g cordova
 # keytool, emulator so on...
 ```
 
-### Get Started
+---
+
+## Get Started with Cordova x React
 #### Installation
 ```
-npx degit yn1323/template#react-cordova <app-name>
+npx degit yn1323/template#cordova-combination <app-name>
 cd <app-name>
 npm install
 npx degit yn1323/template#react app
@@ -70,10 +75,58 @@ const history = createHashHistory()
 
 #### Platform (After fix config.xml)
 ```
-cordova platfom add android
+cordova platform add android
 cordova platform add ios
 ```
 
+---
+
+## Get Started with Cordova x Phenut(Phina.js)
+- [Pheanut](https://github.com/yn1323/pheanut)
+#### Installation
+```
+npx degit yn1323/template#cordova-combination <app-name>
+cd <app-name>
+npm install
+mkdir app
+cd app
+npm init
+npm install -D pheanut
+node ./node_modules/pheanut/bin
+npm install
+```
+
+#### HTML  
+/app/index.html
+Add below inside body tag
+```html
+<script type="text/javascript" src="cordova.js"></script>
+```
+
+#### Change permission to run bat
+```
+npm run chmod
+```
+
+#### Change display name in package.json
+
+#### config.xml
+#### Add Icon
+- /res/icons/android (useful website is in OTHERS)
+#### Change
+- name
+- widget#id
+- description
+- author
+- etc
+
+#### Platform (After fix config.xml)
+```
+cordova platform add android
+cordova platform add ios
+```
+
+---
 ## Debug
 ### Debug in browser
 ```
@@ -84,7 +137,7 @@ npm run start
 ### Debug in device
 ```
 npm run build
-cordova emulate android or ios
+cordova emulate android (or ios)
 ```
 
 ## Release

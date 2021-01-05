@@ -10,3 +10,6 @@ node_modules/
 # Genereted after release build
 /apk/*
 .keystore
+
+/build
+/.eslintcache
