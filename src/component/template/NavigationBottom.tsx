@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core'
 import { Group, Settings } from '@material-ui/icons'
 
-import { useStyles } from 'src/constant'
+import { useCommonStyles } from 'src/constant'
 
 interface Icon {
   label: string
@@ -24,7 +24,7 @@ export const NavigationBottom = () => {
   const [scene, setScene] = useState(
     paths.find(v => v.path === location.pathname)?.index || 0
   )
-  const classes = useStyles()
+  const classes = useCommonStyles()
 
   // ナビゲーションのハイライト変更
   useEffect(() => {

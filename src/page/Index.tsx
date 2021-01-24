@@ -11,6 +11,7 @@ import NavigationBottom from 'src/component/template/NavigationBottom'
 
 export const Index = () => {
   // buildすると、なぜかRoute内にpyが付与されるので、分岐を追加
+  // アプリケーションに応じて要調整
   const padding = process.env.NODE_ENV === 'production' ? 0 : 6
 
   return (

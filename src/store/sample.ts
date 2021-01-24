@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Sample as StateType } from 'State'
+import { Sample as StateType } from 'Store'
 
 const STORE_NAME = 'sample'
 

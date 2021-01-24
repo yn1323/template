@@ -27,7 +27,7 @@ const run = () => {
   })
   ReactDOM.render(
     <React.StrictMode>
-      <MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
         <Provider store={store}>
           <BrowserRouter>
             <Index />
