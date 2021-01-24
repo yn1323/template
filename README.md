@@ -56,10 +56,16 @@ const history = createHashHistory()
   </Suspense>
 </Provider>
 ```
-/app/src/route/index.tsx
+/app/src/constant/route.ts  
+Remove comment
 ```tsx
-<Route exact path="/" component={Top} /> // url for debug
-<Route exact path="./index.html" component={Top} /> // url for using cordova
+// Required in Cordova
+{
+  path: './index.html',
+  title: 'Top',
+  component: Top,
+  showBtmNav: false,
+}
 ```
 
 #### config.xml
