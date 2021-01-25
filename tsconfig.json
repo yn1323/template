@@ -1,28 +1,23 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "data/*": ["src/data/*"],
+      "helper/*": ["src/helper/*"],
+      "sprite/*": ["src/sprite/*"],
+      "scene/*": ["src/scene/*"],
+    },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "moduleResolution": "node",
-    "noEmit": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
+    "module": "commonjs",
     "strict": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "allowJs": true,
+    "noImplicitAny": false,
     "esModuleInterop": true,
+    "allowUnreachableCode": true,
+    "sourceMap": true,
+    "strictPropertyInitialization": false,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "lib": ["dom", "es5", "esnext"]
   },
-  "include": [
-    "src",
-    "index.tsx"
-  ]
 }
