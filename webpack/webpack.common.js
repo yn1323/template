@@ -52,10 +52,10 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public/audio', to: 'audio' },
+        { from: 'public/audio', to: 'public/audio' },
         { from: 'public/font', to: 'font' },
-        { from: 'public/img', to: 'img' },
-        { from: 'public/favicon.ico', to: '' },
+        { from: 'public/img', to: 'public/img' },
+        { from: 'public/favicon.ico', to: 'public' },
       ],
     }),
   ],
