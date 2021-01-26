@@ -5,7 +5,7 @@
   "homepage": ".",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --config webpack/webpack.dev.js",
+    "start": "webpack serve --hot only --config webpack/webpack.dev.js",
     "build": "rimraf dist && webpack --config webpack/webpack.prod.js",
     "bundle": "npm run build",
     "serve": "serve dist",
@@ -72,20 +72,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

@@ -11,6 +11,7 @@ module.exports = {
   entry: [path.resolve(__dirname, '../src/index.ts')],
   output: {
     path: path.resolve(__dirname, '../build'),
+    // publicPath: '../build',
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js',
   },
