@@ -7,18 +7,20 @@ import Index from 'src/page/Index'
 import registerServiceWorker from 'src/reagisterServiceWorker'
 import 'src/asset/scss/index.scss'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
+import i18n from 'src/locales'
+import { I18nextProvider } from 'react-i18next'
 
 const run = () => {
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: '#FFB400',
+        main: '#208DC3',
         contrastText: '#888',
         dark: '#eee',
         light: '#eee',
       },
       secondary: {
-        main: '#FFFBE0',
+        main: '#F6D580',
         contrastText: '#888',
         dark: '#eee',
         light: '#eee',
@@ -27,13 +29,15 @@ const run = () => {
   })
   ReactDOM.render(
     <React.StrictMode>
-      <MuiThemeProvider theme={theme}>
-        <Provider store={store}>
-          <BrowserRouter>
-            <Index />
-          </BrowserRouter>
-        </Provider>
-      </MuiThemeProvider>
+      <I18nextProvider i18n={i18n}>
+        <MuiThemeProvider theme={theme}>
+          <Provider store={store}>
+            <BrowserRouter>
+              <Index />
+            </BrowserRouter>
+          </Provider>
+        </MuiThemeProvider>
+      </I18nextProvider>
     </React.StrictMode>,
     document.getElementById('root')
   )
