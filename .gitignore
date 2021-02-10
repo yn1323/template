@@ -7,9 +7,10 @@ node_modules/
 /plugins/
 /platforms/
 
-# Genereted after release build
-/apk/*
-.keystore
+/.idea/
 
-/build
-/.eslintcache
+# Genereted after release build
+.keystore
+www
+
+/apk/*.apk
