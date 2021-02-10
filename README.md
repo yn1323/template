@@ -167,17 +167,27 @@ npm run release--android <Alias>
 npm run release--ios <Alias>
 ```
 
-### Create release apk
-1. Copy zipalign from ~/Library/Android/sdk/build-tools/xxx to project folder
-2. Execute below
-```
-./zipalign ./zipalign -f -v 4 apk/android_signed.apk apk/android_release.apk
-```
-
 ### Path to APK
 - apk
 
-# Others
+## Google Admob
+
+### Add Plugin
+```sh
+cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="<YOUR_ANDROID_ADMOB_APP_ID_AS_FOUND_IN_ADMOB>"
+```
+
+### Add .env file below /app
+```
+# .env file
+REACT_APP_ADMOB_BANNER_ANDROID = ca-app-pub-xxx/yyy
+REACT_APP_ADMOB_INTERSTITIAL_ANDROID = ca-app-pub-www/zzz
+REACT_APP_ADMOB_REWARDVIDEO_ANDROID = ca-app-pub-bbb/aaa
+```
+
+---
+
+## Others
 ## Icon
 
 [App Icon Generator](https://appicon.co/)
@@ -194,3 +204,4 @@ npm run release--ios <Alias>
 
 ## Memo
 - Network in emulator does not work. Connect to 10.0.2.2 of localhost ?
+- Copy zipalign from ~/Library/Android/sdk/build-tools/xxx to project folder if error occurs
