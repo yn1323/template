@@ -9,8 +9,9 @@ import 'src/asset/scss/index.scss'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import i18n from 'src/locales'
 import { I18nextProvider } from 'react-i18next'
+import { initAd } from 'src/helper'
 
-const run = () => {
+const run = (isEmulator = true) => {
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -42,11 +43,14 @@ const run = () => {
     document.getElementById('root')
   )
   registerServiceWorker()
+   if (isEmulator) {
+    initAd()
+  }
 }
 
 // eslint-disable-next-line no-prototype-builtins
 if (window.hasOwnProperty('cordova')) {
-  document.addEventListener('deviceready', run, false)
+  document.addEventListener('deviceready', () => run(true), false)
 } else {
-  run()
+  run(false)
 }
