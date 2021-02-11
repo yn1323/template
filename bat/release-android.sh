@@ -3,7 +3,7 @@ rm ./apk/android-release.apk
 
 rm -r ./platforms
 
-cordova platoform add android
+cordova platform add android
 
 cordova build android --release
 jarsigner -verbose -keystore .keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk $1
