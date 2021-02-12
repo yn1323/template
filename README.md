@@ -156,7 +156,7 @@ npm run createkey <Alias>
 
 #### Check Key(when forgot alias)
 ```
-npm run keycheck <Password>
+npm run checkkey <Password>
 ```
 
 ### Every release
