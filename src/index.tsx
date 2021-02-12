@@ -43,7 +43,7 @@ const run = (isEmulator = true) => {
     document.getElementById('root')
   )
   registerServiceWorker()
-   if (isEmulator) {
+  if (isEmulator) {
     initAd()
   }
 }

@@ -48,7 +48,7 @@ export const useDialog = () => {
       dispatch(showDialog({ isDialogOpen: open })),
     setDialogComponent: ({
       title = '' as string,
-      component = (<></>) as any,
+      component = '' as any,
     }) => dispatch(setDialog({ dialog: { title, component } })),
   }
 }
