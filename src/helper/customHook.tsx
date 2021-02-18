@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 import { setDialog, showDialog, toggleDrawer } from 'src/store/component'
 import { Component, State } from 'Store'
 
@@ -51,4 +52,9 @@ export const useDialog = () => {
       component = '' as any,
     }) => dispatch(setDialog({ dialog: { title, component } })),
   }
+}
+
+export const useIsLocation = (path = '' as string) => {
+  const { pathname } = useLocation()
+  return pathname.includes(path)
 }
