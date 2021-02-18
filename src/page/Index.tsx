@@ -6,13 +6,16 @@ import { Box } from '@material-ui/core'
 import Spinner from 'src/component/molecule/CenterSpinner'
 import NavigationTop from 'src/component/template/NavigationTop'
 import NavigationBottom from 'src/component/template/NavigationBottom'
+import DialogTemplate from 'src/component/template/Dialog'
+import LoadingOverlay from 'src/component/organism/Backdrop'
+import Snackbar from 'src/component/organism/Snackbar'
 
 // export default () => JSX では、fast refreshが効かないことがある
 
 export const Index = () => {
   // buildすると、なぜかRoute内にpyが付与されるので、分岐を追加
   // アプリケーションに応じて要調整
-  const padding = process.env.NODE_ENV === 'production' ? 0 : 6
+  const padding = 7
 
   return (
     <>
@@ -23,6 +26,9 @@ export const Index = () => {
         </Suspense>
       </Box>
       <NavigationBottom />
+      <DialogTemplate />
+      <LoadingOverlay />
+      <Snackbar />
     </>
   )
 }

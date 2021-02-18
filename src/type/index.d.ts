@@ -12,9 +12,21 @@ declare module 'Store' {
     isDrawerOpen: boolean
     isDialogOpen: boolean
     dialog: Dialog
+    loading: boolean
+    snackbar: Snackbar
   }
   interface Dialog {
     title: string
     component: any
+    menu: DialogMenu[]
+  }
+  export interface DialogMenu {
+    text: string
+    callback: (k: any) => any
+  }
+  interface Snackbar {
+    isOpen: boolean
+    type: 'success' | 'error' | 'warning' | 'info'
+    msg: string
   }
 }

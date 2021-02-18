@@ -1,7 +1,13 @@
+import moment from 'moment-timezone'
+
 // eslint-disable-next-line @typescript-eslint/ban-types
 export const deepcopy = (obj: {} | []) => JSON.parse(JSON.stringify(obj))
 
-export const replaceArray = (array: [], targetId: number, sourceId: number) => {
+export const replaceArray = (
+  array: any[],
+  targetId: number,
+  sourceId: number
+) => {
   return array.reduce(
     (resultArray, element, id, originalArray) => [
       ...resultArray,
@@ -69,3 +75,6 @@ export const sortObjectedArray = (obj: any[], sortKey: string) => {
   })
   return t
 }
+
+export const addComma = (x: number) =>
+  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')

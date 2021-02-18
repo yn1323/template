@@ -8,7 +8,14 @@ export const defaultVal: StateType = {
   isDialogOpen: false,
   dialog: {
     title: '',
+    menu: [],
     component: '',
+  },
+  loading: false,
+  snackbar: {
+    isOpen: false,
+    msg: '',
+    type: 'success',
   },
 }
 
@@ -32,9 +39,38 @@ const State = createSlice({
       ...state,
       ...payload,
     }),
+    showLoading: (state: StateType) => ({
+      ...state,
+      loading: true,
+    }),
+    hideLoading: (state: StateType) => ({
+      ...state,
+      loading: false,
+    }),
+    showSnackbar: (state: StateType, { payload }) => ({
+      ...state,
+      snackbar: {
+        isOpen: true,
+        ...payload,
+      },
+    }),
+    hideSnackbar: (state: StateType) => ({
+      ...state,
+      snackbar: {
+        ...initialState.snackbar,
+      },
+    }),
   },
 })
 
 export default State.reducer
 
-export const { toggleDrawer, setDialog, showDialog } = State.actions
+export const {
+  toggleDrawer,
+  setDialog,
+  showDialog,
+  showLoading,
+  hideLoading,
+  showSnackbar,
+  hideSnackbar,
+} = State.actions
