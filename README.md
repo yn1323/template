@@ -46,7 +46,10 @@ Sample when using `npx degit yn1323/template#react <app-name>`
 import createHashHistory from 'history/createHashHistory'
 const history = createHashHistory()
 // Replace
-<BrowserrRuter/> -> <Router history={history}/>
+import { BrowserRouter, Router } from 'react-router-dom
+
+<BrowserRouter/> -> <Router history={history}/>
+
 // Enclose with Suspense (Example)
 <Provider store={store}>
   <Suspense fallback={<div>Loading...</div>}>
