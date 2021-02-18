@@ -31,13 +31,6 @@ Add below inside body tag
 <script type="text/javascript" src="cordova.js"></script>
 ```
 
-#### Service Worker File
-/app/src/registerServiceWorker.ts
-```js
-const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href)  // before
-const publicUrl = new URL(process.env.PUBLIC_URL, ' ')  // after
-```
-
 #### Change permission to run bat
 ```
 npm run chmod
