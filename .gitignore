@@ -10,6 +10,8 @@
 
 # production
 /build
+/public/service*
+/public/workbox*
 
 # misc
 .DS_Store
