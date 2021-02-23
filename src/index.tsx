@@ -17,15 +17,15 @@ const run = (isEmulator = true) => {
     palette: {
       primary: {
         main: '#208DC3',
-        contrastText: '#888',
-        dark: '#eee',
-        light: '#eee',
+        contrastText: '#eee',
+        dark: '#166187',
+        light: '#CBE6F3',
       },
       secondary: {
-        main: '#F6D580',
+        main: '#E38692',
         contrastText: '#888',
-        dark: '#eee',
-        light: '#eee',
+        dark: '#BB3B4C',
+        light: '#F6D4D8',
       },
     },
   })
