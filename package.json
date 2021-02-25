@@ -9,8 +9,10 @@
     "build": "bat/build.sh",
     "checkkey": "bat/checkkey.sh",
     "createkey": "bat/createkey.sh",
-    "release--android": "bat/release-android.sh",
-    "release--ios": "bat/release-ios.sh"
+    "emulate--android": "npm run build && cordova emulate android",
+    "emulate--ios": "npm run build && cordova emulate ios",
+    "release--android": "npm run build && bat/release-android.sh",
+    "release--ios": "npm run build && bat/release-ios.sh"
   },
   "keywords": [
     "ecosystem:cordova"

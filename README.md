@@ -124,10 +124,15 @@ cd app
 npm run start
 ```
 
-### Debug in device
+### Debug in emulator
 ```
-npm run build
-cordova emulate android (or ios)
+npm run emulate--android
+npm run emulate--ios
+```
+
+### Show emulator debug message
+```
+adb logcat | grep CONSOLE
 ```
 
 ## Release
