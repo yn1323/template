@@ -132,6 +132,7 @@ npm run start
 npm run emulate--android
 npm run emulate--ios
 
+# React only
 npm run emulate--android--en
 npm run emulate--ios--en
 ```
@@ -163,6 +164,7 @@ npm run checkkey <Password>
 npm run release--android <Alias>
 npm run release--ios <Alias>
 
+# React only
 npm run release--android--en <Alias>
 npm run release--ios--en <Alias>
 ```
