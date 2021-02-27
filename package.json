@@ -7,12 +7,17 @@
   "scripts": {
     "chmod": "chmod 755 ./bat/*",
     "build": "bat/build.sh",
+    "build--en": "bat/build.sh en",
     "checkkey": "bat/checkkey.sh",
     "createkey": "bat/createkey.sh",
     "emulate--android": "npm run build && cordova emulate android",
+    "emulate--android--en": "npm run build--en && cordova emulate android",
     "emulate--ios": "npm run build && cordova emulate ios",
-    "release--android": "npm run build && bat/release-android.sh",
-    "release--ios": "npm run build && bat/release-ios.sh"
+    "emulate--ios--en": "npm run build--en && cordova emulate ios",
+    "release--android": "npm run build && bat/release-android.sh ja",
+    "release--android--en": "npm run build--en && bat/release-android.sh en",
+    "release--ios": "npm run build && bat/release-ios.sh ja",
+    "release--ios--en": "npm run build--en && bat/release-ios.sh en"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -35,6 +40,7 @@
   },
   "dependencies": {
     "cordova-android": "9.0.0",
-    "cordova-ios": "6.1.1"
+    "cordova-ios": "6.1.1",
+    "xml2js": "^0.4.23"
   }
 }

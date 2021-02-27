@@ -104,11 +104,14 @@ npm run chmod
 #### Add Icon
 - /res/icons/android (useful website is in OTHERS)
 #### Change
-- name
 - widget#id
-- description
 - author
 - etc
+
+#### info.json(language file)
+Followings will handle by info.json
+- name
+- description
 
 #### Platform (After fix config.xml)
 ```
@@ -128,6 +131,9 @@ npm run start
 ```
 npm run emulate--android
 npm run emulate--ios
+
+npm run emulate--android--en
+npm run emulate--ios--en
 ```
 
 ### Show emulator debug message
@@ -156,6 +162,9 @@ npm run checkkey <Password>
 ```
 npm run release--android <Alias>
 npm run release--ios <Alias>
+
+npm run release--android--en <Alias>
+npm run release--ios--en <Alias>
 ```
 
 ### Path to APK
