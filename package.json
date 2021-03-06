@@ -2,6 +2,14 @@
   "name": "ionic-react",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}';",
+    "i18n-extract": "NODE_ENV=development babel './src/**/*.{js,jsx,ts,tsx}'"
+  },
   "dependencies": {
     "@capacitor/core": "2.4.7",
     "@ionic/react": "^5.5.0",
@@ -36,12 +44,6 @@
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
     "workbox-streams": "^5.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
