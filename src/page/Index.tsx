@@ -1,7 +1,13 @@
-import { Redirect, Route } from 'react-router-dom'
-import { IonApp, IonRouterOutlet } from '@ionic/react'
-import { IonReactRouter } from '@ionic/react-router'
-import Home from 'src/pages/Home'
+import React from 'react'
+import {
+  IonApp,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react'
+import Route from 'src/route'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -20,21 +26,12 @@ import '@ionic/react/css/flex-utils.css'
 import '@ionic/react/css/display.css'
 
 /* Theme variables */
-import 'src/theme/variables.scss'
+import 'src/asset/scss/theme/variables.scss'
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+const Index = () => (
+  <React.Suspense fallback={<>Loading</>}>
+    <Route />
+  </React.Suspense>
 )
 
-export default App
+export default Index

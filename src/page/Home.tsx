@@ -5,8 +5,7 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react'
-import ExploreContainer from '../components/ExploreContainer'
-import 'src/pages/Home.scss'
+import 'src/asset/scss/page/Home.scss'
 
 const Home: React.FC = () => {
   return (
@@ -22,7 +21,7 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        dsdsa
       </IonContent>
     </IonPage>
   )

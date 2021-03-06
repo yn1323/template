@@ -1,12 +1,21 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
-import App from './App'
-import * as serviceWorkerRegistration from './serviceWorkerRegistration'
-import reportWebVitals from './reportWebVitals'
+import Index from 'src/page/Index'
+import { I18nextProvider } from 'react-i18next'
+
+import * as serviceWorkerRegistration from 'src/serviceWorkerRegistration'
+import reportWebVitals from 'src/reportWebVitals'
+import i18n from 'src/locales'
+import store from 'src/store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <I18nextProvider i18n={i18n}>
+      <Provider store={store}>
+        <Index />
+      </Provider>
+    </I18nextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
