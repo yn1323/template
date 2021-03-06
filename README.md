@@ -1,19 +1,31 @@
-## Templates
+# Ionic x React
 
-### React
-`npx degit yn1323/template#react <app-name>`
+## Required
+`npm install -g ionic cordova`
+`npm install -g @ionic/cli native-run cordova-res`
 
-### Cordova
-`npx degit yn1323/template#cordova-combination <app-name>`
+## Start Guide
 
-### Phaser3
-`npx degit yn1323/template#phaser <app-name>`
+## Debug
+`ionic serve`
 
-### Svelte x webpack x Sass
-`npx degit yn1323/template#svelte-webpack-sass <app-name>`
+## Publish
+1. Command
+```sh
+ionic build
+npx cap copy
+npx cap update
+ionic capacitor open android
+```
+2. Change Build Variant to release
+3. Bild > Build
 
-### React x SSR(Next.js)
-`npx degit yn1323/template#react-ssr <app-name>`
 
-### Ionic x React
-`npx degit yn1323/template#ionic <app-name>`
+## Once Required
+```sh
+keytool -genkey -v -keystore .keystore -alias test -keyalg RSA -keysize 2048 -validity 10000
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore .keystore android/app/build/outputs/apk/release/app-release-unsigned.apk test
+./zipalign -f -v 4 android/app/build/outputs/apk/release/app-release-unsigned.apk android/app/build/outputs/apk/release/app-release.apk
+ionic capacitor add android
+```
+
