@@ -11,7 +11,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}';",
-    "i18n-extract": "NODE_ENV=development babel './src/**/*.{js,jsx,ts,tsx}'"
+    "i18n-extract": "NODE_ENV=development babel './src/**/*.{js,jsx,ts,tsx}'",
+    "chmod": "chmod 755 ./bat/*",
+    "checkkey": "bat/checkkey.sh",
+    "createkey": "bat/createkey.sh",
+    "release--android": "npm run build && bat/release-android.sh ja",
+    "release--android--en": "npm run build--en && bat/release-android.sh en"
   },
   "dependencies": {
     "@capacitor/core": "2.4.7",

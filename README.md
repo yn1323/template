@@ -22,6 +22,7 @@ ionic capacitor open android
 
 ## Once Required
 ```sh
+npm run chmod
 keytool -genkey -v -keystore .keystore -alias test -keyalg RSA -keysize 2048 -validity 10000
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore .keystore android/app/build/outputs/apk/release/app-release-unsigned.apk test
 ./zipalign -f -v 4 android/app/build/outputs/apk/release/app-release-unsigned.apk android/app/build/outputs/apk/release/app-release.apk
