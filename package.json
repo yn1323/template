@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --mode production",
+    "start--en": "REACT_APP_LANG=en react-scripts start",
+    "build--en": "REACT_APP_LANG=en react-scripts build --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}';",

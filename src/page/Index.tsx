@@ -1,12 +1,4 @@
 import React from 'react'
-import {
-  IonApp,
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react'
 import Route from 'src/route'
 
 /* Core CSS required for Ionic components to work properly */

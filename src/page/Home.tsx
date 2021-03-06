@@ -7,7 +7,10 @@ import {
 } from '@ionic/react'
 import 'src/asset/scss/page/Home.scss'
 
+import { useTranslation } from 'react-i18next'
+
 const Home = () => {
+  const { t } = useTranslation()
   return (
     <IonPage>
       <IonHeader>
@@ -21,7 +24,7 @@ const Home = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        dsdsa
+        {t('日本語')}
       </IonContent>
     </IonPage>
   )
