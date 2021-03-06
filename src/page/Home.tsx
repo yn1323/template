@@ -7,7 +7,7 @@ import {
 } from '@ionic/react'
 import 'src/asset/scss/page/Home.scss'
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <IonPage>
       <IonHeader>

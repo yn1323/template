@@ -1,4 +1,4 @@
-export const NoPage = () => {
+const NoPage = () => {
   return <div>４０４</div>
 }
 
