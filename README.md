@@ -14,3 +14,6 @@
 
 ### React x SSR(Next.js)
 `npx degit yn1323/template#react-ssr <app-name>`
+
+### Ionic x React
+`npx degit yn1323/template#ionic <app-name>`
