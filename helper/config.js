@@ -1,25 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs')
-const xml2js = require('xml2js')
 
-const parser = new xml2js.Parser()
-const xmlBuilder = new xml2js.Builder()
+const { readJson, convertOptions } = require('./common')
 
-const { getInfo, convertOptions } = require('./common')
+const configFile = './capacitor.config.json'
 
-const configFile = './config.xml'
-
-const appInfo = getInfo()
+const appInfo = readJson('./app-translate.json')
+const configInfo = readJson(configFile)
 const { lang } = convertOptions(process.argv)
 
-const appName = appInfo.name[lang]
-const description = appInfo.description[lang]
+configInfo.appName = appInfo.appName[lang]
 
-fs.readFile(configFile, (err, data) => {
-  parser.parseString(data, (err, result) => {
-    result.widget.name = [appName]
-    result.widget.description = [description]
-    var xml = xmlBuilder.buildObject(result)
-    fs.writeFileSync(configFile, xml)
-  })
-})
+fs.writeFileSync(configFile, JSON.stringify(configInfo, null, 2))

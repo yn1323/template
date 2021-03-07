@@ -1,10 +1,6 @@
 {
-  "name": {
+  "appName": {
     "ja": "アプリ名",
     "en": "App Name"
-  },
-  "description": {
-    "ja": "アプリ説明",
-    "en": "App Description"
   }
 }

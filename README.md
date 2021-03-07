@@ -6,24 +6,34 @@
 
 ## Start Guide
 
+## initialize
+```sh
+npm i
+npm run chmod
+npm run createkey <Alias>
+```
+
+## Application setting
+1. app-translate.json  
+Enter ja and en application name
+
+2. capacitor.config.json  
+Enter AppId
+
 ## Debug
 `ionic serve`
 
 ## Publish
 1. Command
 ```sh
-ionic build
-npx cap copy
-npx cap update
-ionic capacitor open android
+# ja
+npm run release--android
+# en
+npm run release--android--en
 ```
-2. Change Build Variant to release
-3. Bild > Build
 
 ## Once Required
 ```sh
-npm run chmod
-keytool -genkey -v -keystore .keystore -alias test -keyalg RSA -keysize 2048 -validity 10000
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore .keystore android/app/build/outputs/apk/release/app-release-unsigned.apk test
 ./zipalign -f -v 4 android/app/build/outputs/apk/release/app-release-unsigned.apk android/app/build/outputs/apk/release/app-release.apk
 ionic capacitor add android

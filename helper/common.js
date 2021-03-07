@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs')
 
-const getInfo = () => {
-  let rawdata = fs.readFileSync('app-translation.json')
+const readJson = filePath => {
+  let rawdata = fs.readFileSync(filePath)
   return JSON.parse(rawdata)
 }
 
@@ -23,6 +23,6 @@ const convertOptions = arr => {
 }
 
 module.exports = {
-  getInfo,
+  readJson,
   convertOptions,
 }

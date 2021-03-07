@@ -1,23 +1,28 @@
-if [ -z $2 ]; then
-  echo 'Please enter <Alias>'
+if [ -z $1 ]; then
+  echo 'Please enter ja or en'
   exit
 fi
 
+echo +++++++++++++release build start+++++++++++++
+
+echo remove old platform file
+rm -r ./.gradle
+rm -r ./android
+
+
+echo change capacitor.config.json language
 # change config.xml language
 node ./helper/config.js --lang $1
 
-rm ./apk/android-signed.apk
-rm ./apk/android-release.apk
+echo add platform
+ionic capacitor add android
 
-rm -r ./platforms
+ionic cap copy
 
-cordova platform add android
+ionic cap sync
 
-cordova build android --release
-jarsigner -verbose -keystore .keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk $2
-cp ./platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk ./apk/
+echo open android studio
+echo please build in android studio
+ionic capacitor open android
 
-mv ./apk/app-release-unsigned.apk ./apk/android-signed.apk
-echo android release build succeeded
-./zipalign -f -v 4 apk/android-signed.apk apk/android-release.apk
-rm ./apk/android-signed.apk
+echo +++++++++++++release build end+++++++++++++
