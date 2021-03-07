@@ -14,8 +14,9 @@ npm run createkey <Alias>
 ```
 
 ## Application setting
-1. app-translate.json  
-Enter ja and en application name
+1. app.json  
+- Enter ja and en application name
+- Enter extra permission required in capacitor
 
 2. capacitor.config.json  
 Enter AppId
