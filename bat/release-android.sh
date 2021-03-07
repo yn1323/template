@@ -21,6 +21,9 @@ ionic cap copy
 
 ionic cap sync
 
+# edit ANdroidManifest.xml permission
+node ./helper/editAndroidManifest.js
+
 echo open android studio
 echo please build in android studio
 ionic capacitor open android

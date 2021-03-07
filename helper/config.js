@@ -5,7 +5,8 @@ const { readJson, convertOptions } = require('./common')
 
 const configFile = './capacitor.config.json'
 
-const appInfo = readJson('./app-translate.json')
+const appInfo = readJson('./app.json')
+
 const configInfo = readJson(configFile)
 const { lang } = convertOptions(process.argv)
 
