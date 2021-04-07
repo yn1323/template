@@ -35,6 +35,7 @@ module.exports = {
     ],
     // 重複したセレクタの検出
     'no-duplicate-selectors': null,
+    'font-family-no-missing-generic-family-keyword': null,
     // display値によって無効化されてしまうプロパティの検出
     'plugin/declaration-block-no-ignored-properties': true,
     'selector-type-no-unknown': [
