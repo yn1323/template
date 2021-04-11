@@ -27,7 +27,6 @@ export const Align = ({
       alignItems={alighItems}
       justify={justify}
       direction={direction}
-      style={{ minHeight: '80vh' }}
     >
       {children}
     </Grid>
