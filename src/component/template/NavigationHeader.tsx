@@ -32,7 +32,7 @@ const NavigationHeader = () => {
   const { setIsDrawerOpen } = useDrawer()
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="sticky">
       <Toolbar>
         <IconButton
           edge="start"

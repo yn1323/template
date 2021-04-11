@@ -7,7 +7,7 @@ export const NavigationTop = () => {
   const classes = useCommonStyles()
 
   return (
-    <AppBar position="static" className={classes.stickTop}>
+    <AppBar position="sticky" className={classes.stickTop}>
       <Tabs value={0}>
         <Tab label="aaa" />
       </Tabs>
