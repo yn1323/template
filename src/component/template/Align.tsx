@@ -27,6 +27,7 @@ export const Align = ({
       alignItems={alighItems}
       justify={justify}
       direction={direction}
+      style={{ height: '100%' }}
     >
       {children}
     </Grid>
