@@ -1,30 +1,16 @@
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react'
+import { IonCol, IonContent, IonGrid, IonPage, IonRow } from '@ionic/react'
+
 import 'src/asset/scss/page/Home.scss'
 
-import { useTranslation } from 'react-i18next'
-
 const Home = () => {
-  const { t } = useTranslation()
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        {t('日本語')}
+      <IonContent className="height-100 background" scrollY={false}>
+        <IonGrid className="height-100 backgroundoo">
+          <IonRow className="height-25"></IonRow>
+          <IonRow className="height-50"></IonRow>
+          <IonRow className="height-25"></IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   )
