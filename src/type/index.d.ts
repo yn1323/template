@@ -3,8 +3,6 @@ declare module 'Common' {}
 declare module 'Store' {
   export interface State {
     component: Component
-    config: Config
-    timer: Timer
   }
   export interface Component {
     nav: Nav
