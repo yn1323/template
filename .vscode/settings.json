@@ -11,10 +11,8 @@
     "editor.codeActionsOnSaveTimeout": true,
     "source.fixAll.stylelint": true
   },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true,
-  },
-  "editor.formatOnSave": false,
+
+  "editor.formatOnSave": true,
   "eslint.workingDirectories": [
     {
       "directory": "./app",

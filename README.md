@@ -21,9 +21,6 @@ npm run createkey <Alias>
 2. capacitor.config.json  
 Enter AppId
 
-## Debug
-`ionic serve`
-
 ## Publish
 1. Command
 ```sh

@@ -2,8 +2,8 @@ import { combineReducers } from 'redux'
 import { configureStore } from '@reduxjs/toolkit'
 import logger from 'redux-logger'
 
-import { isProduction } from 'src/constant'
-import component from 'src/store/component'
+import { isProduction } from '@constant'
+import component from '@store/component'
 
 const reducer = combineReducers({
   component,

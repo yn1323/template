@@ -15,17 +15,17 @@ echo change capacitor.config.json language
 node ./helper/config.js --lang $1
 
 echo add platform
-ionic capacitor add android
+npx cap add android
 
-ionic cap copy
+npx cap copy
 
-ionic cap sync
+npx cap sync
 
 # edit ANdroidManifest.xml permission
 node ./helper/editAndroidManifest.js
 
 echo open android studio
 echo please build in android studio
-ionic capacitor open android
+npx cap open android
 
 echo +++++++++++++release build end+++++++++++++

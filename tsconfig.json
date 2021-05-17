@@ -1,6 +1,44 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@atom/*": [
+        "src/components/atom/*"
+      ],
+      "@molecule/*": [
+        "src/components/molecule/*"
+      ],
+      "@organism/*": [
+        "src/components/organism/*"
+      ],
+      "@template/*": [
+        "src/components/template/*"
+      ],
+      "@constant": [
+        "src/constant"
+      ],
+      "@helper": [
+        "src/helper"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@scss/*": [
+        "src/assets/scss/*"
+      ],
+      "@img/*": [
+        "src/assets/img/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@type/*": [
+        "src/type/*"
+      ],
+    },
     "target": "es5",
     "lib": [
       "dom",
