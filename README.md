@@ -17,3 +17,6 @@
 
 ### Ionic x React
 `npx degit yn1323/template#ionic <app-name>`
+
+### Capacitor x Gatsby
+`npx degit yn1323/template#capacitor-gatsby <app-name>`
