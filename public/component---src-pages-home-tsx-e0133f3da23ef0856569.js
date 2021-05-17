@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_capacitor_template=self.webpackChunkgatsby_capacitor_template||[]).push([[373],{3443:function(t,a,e){"use strict";e.r(a);e(7294);var c=e(3431);a.default=function(){return(0,c.tZ)("div",null,"HOME")}}}]);
+//# sourceMappingURL=component---src-pages-home-tsx-e0133f3da23ef0856569.js.map

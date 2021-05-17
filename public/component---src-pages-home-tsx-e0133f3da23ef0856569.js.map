@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://gatsby-capacitor-template/./src/pages/home.tsx"],"names":[],"mappings":"wKAMA,UAJa,WACX,OAAO","file":"component---src-pages-home-tsx-e0133f3da23ef0856569.js","sourcesContent":["import React from 'react'\n\nconst Home = () => {\n  return <div>HOME</div>\n}\n\nexport default Home\n"],"sourceRoot":""}
