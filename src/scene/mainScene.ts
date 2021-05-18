@@ -1,8 +1,8 @@
-import PhaserLogo from 'sprite/phaserLogo'
-import FpsText from 'sprite/fpsText'
+import PhaserLogo from '@sprite/phaserLogo'
+import FpsText from '@sprite/fpsText'
 
 export default class MainScene extends Phaser.Scene {
-  fpsText: Phaser.GameObjects.Text
+  fpsText!: Phaser.GameObjects.Text
 
   constructor() {
     super({ key: 'MainScene' })

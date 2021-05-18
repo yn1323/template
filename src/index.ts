@@ -1,6 +1,6 @@
 import 'phaser'
-import MainScene from 'scene/mainScene'
-import PreloadScene from 'scene/preloadScene'
+import MainScene from '@scene/mainScene'
+import PreloadScene from '@scene/preloadScene'
 
 const DEFAULT_WIDTH = 1280
 const DEFAULT_HEIGHT = 720
