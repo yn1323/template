@@ -1,6 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+
+const Box = styled.div`
+  ${tw`bg-orange-500`};
+`;
 
 export default function Home() {
   return (
@@ -50,9 +56,22 @@ export default function Home() {
             </p>
           </a>
         </div>
-        <div className="px-6 py-4">aaa</div>
       </main>
-
+<div className="max-w-sm rounded overflow-hidden shadow-lg">
+  {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/> */}
+  <div className="px-6 py-4">
+    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+    <p className="text-gray-700 text-base">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+    </p>
+  </div>
+  <div className="px-6 py-4">
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+  </div>
+</div>
+<Box>aaa</Box>
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
