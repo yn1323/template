@@ -50,6 +50,7 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <div className="px-6 py-4">aaa</div>
       </main>
 
       <footer className={styles.footer}>
