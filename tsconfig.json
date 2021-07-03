@@ -6,6 +6,7 @@
       "@helper": ["src/helper"],
       "@hooks": ["src/hooks"],
       "@constant": ["src/constant"],
+      "@recoil/*": ["src/recoil/*"],
       "@atom/*": ["components/atom/*"],
       "@molecule/*": ["components/molecule/*"],
       "@organism/*": ["components/organism/*"],

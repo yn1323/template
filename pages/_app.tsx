@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 
+import { RecoilRoot } from 'recoil'
+
 import 'styles/globals.css'
 import 'styles/ionicTheme.css'
 
@@ -25,7 +27,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     ionDefineCustomElements(window)
   })
-  return <Component {...pageProps} />
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  )
 }
 
 export default App
