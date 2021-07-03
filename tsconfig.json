@@ -8,6 +8,18 @@
       "@constant": [
         "src/constant"
       ],
+      "@atom/*": [
+        "components/atom/*"
+      ],
+      "@molecule/*": [
+        "components/molecule/*"
+      ],
+      "@organism/*": [
+        "components/organism/*"
+      ],
+      "@template/*": [
+        "components/template/*"
+      ],
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
