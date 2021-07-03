@@ -43,4 +43,4 @@ android
 .keystore
 
 # StoryBook
-storybook-static/
+build-storybook/

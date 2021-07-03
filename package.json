@@ -11,7 +11,7 @@
     "csr--en": "csr=1 lang=en next build && csr=1 lang=en next export -o build/",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o ./build-storybook",
     "chmod": "chmod 755 ./bat/*",
     "checkkey": "bat/checkkey.sh",
     "createkey": "bat/createkey.sh",
