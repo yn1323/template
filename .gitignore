@@ -32,3 +32,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# App
+.env
+/apk/*.apk
+
+android
+.gradle
+.keystore
