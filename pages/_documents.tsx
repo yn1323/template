@@ -14,7 +14,6 @@ export default class MyDocument extends Document<Props> {
     );
 
     const styleTags = sheet.getStyleElement();
-
     return {...page, styleTags};
   }
 

@@ -1,18 +1,39 @@
 {
-  "editor.formatOnSave": false,
+    "eslint.validate": [
+      "html",
+      "javascriptreact",
+      "typescriptreact"
+    ],
+    "tailwindCSS.includeLanguages": {
+      "typescriptreact": "html"
+    },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": [
-    "html",
-    "javascriptreact",
-    "typescriptreact"
-  ],
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  // Monokai Extended for "console" color
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "variable.defaultLibrary": "#66d9ef"
+    }
+  },
+  "stylelint.enable": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "stylelint.enable": true,
-  "tailwindCSS.includeLanguages": {
-    "typescriptreact": "html"
-  }
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
 }
