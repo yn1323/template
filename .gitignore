@@ -36,7 +36,7 @@ yarn-error.log*
 # App
 .env
 /apk/*.apk
-/www/
+/www
 
 android
 .gradle
