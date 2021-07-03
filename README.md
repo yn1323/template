@@ -15,7 +15,7 @@
 
 ### Install from degit
 
-`npx degit yn1323/template#ionic <app-name>`
+`npx degit yn1323/template#ionic-next <app-name>`
 
 ### Required
 
