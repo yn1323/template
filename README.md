@@ -20,3 +20,6 @@
 
 ### Capacitor x Gatsby
 `npx degit yn1323/template#capacitor-gatsby <app-name>`
+
+### Next.js Ionic
+`npx degit yn1323/template#ionic-next <app-name>`
