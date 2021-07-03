@@ -13,6 +13,10 @@
 
 ## Start Guide
 
+### Install from degit
+
+`npx degit yn1323/template#ionic <app-name>`
+
 ### Required
 
 - `npm install -g ionic cordova @ionic/cli native-run cordova-res`
