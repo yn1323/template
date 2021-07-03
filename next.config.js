@@ -1,7 +1,12 @@
-const isStaticBuild = process.env.CSR === '1'
+const isCSR = process.env.csr === '1'
+const lang = process.env.lang ?? 'ja'
 
 const common = {
   reactStrictMode: true,
+  env: {
+    lang: lang,
+    csr: isCSR,
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false
@@ -10,7 +15,7 @@ const common = {
   },
 }
 
-const i18n = isStaticBuild
+const i18n = isCSR
   ? {}
   : {
       i18n: {
@@ -18,7 +23,7 @@ const i18n = isStaticBuild
         defaultLocale: 'ja',
       },
     }
-const exportPathMap = isStaticBuild
+const exportPathMap = isCSR
   ? {
       // Avoid 404 when refresh
       trailingSlash: true,

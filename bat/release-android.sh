@@ -17,15 +17,15 @@ node ./bat/config.js --lang $1
 echo add platform
 ionic capacitor add android
 
-ionic cap copy
+npx cap copy
 
-ionic cap sync
+npx cap sync
 
 # edit ANdroidManifest.xml permission
 node ./bat/editAndroidManifest.js
 
 echo open android studio
 echo please build in android studio
-ionic capacitor open android
+npx cap open android
 
 echo +++++++++++++release build end+++++++++++++

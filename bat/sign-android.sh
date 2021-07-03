@@ -1,5 +1,7 @@
 if [ -z $1]; then
   echo 'Please enter <Alias>'
+  echo 'Check Alias key name from this command '
+  echo 'npm run checkkey <PW>'
   exit
 fi
 

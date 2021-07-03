@@ -13,7 +13,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Button label="aaaa"></Button>
+        <Button label="aaaa" primary></Button>
         <Link href="/about">
           <a>About Us</a>
         </Link>
