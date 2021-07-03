@@ -1,10 +1,11 @@
+import { useLocale } from '@hooks'
 import React from 'react'
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import styled from 'styled-components'
+import tw from 'tailwind.macro'
 
 const Box = styled.div`
   ${tw`bg-orange-500`};
-`;
+`
 
 export interface Props {
   primary?: boolean
@@ -21,6 +22,7 @@ const Button: React.FC<Props> = ({
   label,
   ...props
 }) => {
+  const { t } = useLocale()
   const baseButton = 'rounded-full font-bold'
   const sizeMode =
     size === 'small'
@@ -39,7 +41,7 @@ const Button: React.FC<Props> = ({
       >
         {label}
       </button>
-      <Box>aaPa</Box>
+      <Box>{t('ボタン！')}</Box>
     </div>
   ) : (
     <button
