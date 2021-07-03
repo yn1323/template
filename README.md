@@ -61,7 +61,7 @@ const Component = () => <Box>{t('ボタン！')}</Box>
 ### CSR
 
 1. `npm run csr`
-2. www folder
+2. buil folder
 
 ### Android Apk
 
@@ -94,6 +94,10 @@ const Component = () => <Box>{t('ボタン！')}</Box>
    `npm run sign--android <Alias of key>`
 
 4. APK file in ./apk
+
+## Build Story book
+
+`npm run build-storybook`
 
 ## Others
 
