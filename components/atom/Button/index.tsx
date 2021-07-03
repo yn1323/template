@@ -6,7 +6,7 @@ const Box = styled.div`
   ${tw`bg-orange-500`};
 `;
 
-export interface ButtonProps {
+export interface Props {
   primary?: boolean
   backgroundColor?: string
   size?: 'small' | 'medium' | 'large'
@@ -14,7 +14,7 @@ export interface ButtonProps {
   onClick?: () => void
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<Props> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -39,6 +39,7 @@ export const Button: React.FC<ButtonProps> = ({
       >
         {label}
       </button>
+      <Box>aaPa</Box>
     </div>
   ) : (
     <button
@@ -51,3 +52,5 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   )
 }
+
+export default Button
