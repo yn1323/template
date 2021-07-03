@@ -9,7 +9,13 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chmod": "chmod 755 ./bat/*",
+    "checkkey": "bat/checkkey.sh",
+    "createkey": "bat/createkey.sh",
+    "release--android": "npm run build && bat/release-android.sh ja",
+    "release--android--en": "npm run build--en && bat/release-android.sh en",
+    "sign--android": "bat/sign-android.sh"
   },
   "dependencies": {
     "@ionic-native/core": "^5.34.0",
