@@ -8,15 +8,6 @@ const common = {
     }
     return config
   },
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/': { page: '/' },
-      '/about': { page: '/about' },
-    }
-  },
 }
 
 const i18n = isStaticBuild
@@ -27,6 +18,20 @@ const i18n = isStaticBuild
         defaultLocale: 'ja',
       },
     }
-console.log(isStaticBuild)
-console.log(i18n)
-module.exports = { ...common, ...i18n }
+const exportPathMap = isStaticBuild
+  ? {
+      // Avoid 404 when refresh
+      trailingSlash: true,
+      exportPathMap: async (
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+      ) => {
+        return {
+          '/': { page: '/' },
+          '/about': { page: '/about' },
+        }
+      },
+    }
+  : {}
+
+module.exports = { ...common, ...i18n, ...exportPathMap }

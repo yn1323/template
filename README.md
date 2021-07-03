@@ -90,3 +90,9 @@ const Component = () => <Box>{t('ボタン！')}</Box>
    `npm run sign--android <Alias of key>`
 
 4. APK file in ./apk
+
+## Others
+
+### Check KeyName
+
+`npm run checkkey <PW>`

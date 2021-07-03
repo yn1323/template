@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+
+import 'styles/globals.css'
+import 'styles/ionicTheme.css'
 
 import { defineCustomElements as ionDefineCustomElements } from '@ionic/core/loader'
 /* Core CSS required for Ionic components to work properly */

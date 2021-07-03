@@ -1,7 +1,6 @@
 import { useLocale } from '@hooks'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import PropTypes from 'prop-types'
 
 const Box = styled.div`
   ${tw`bg-orange-500`};

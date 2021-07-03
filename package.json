@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "csr": "CSR=1 next build && CSR=1 next export -o www/",
+    "csr": "CSR=1 next build && CSR=1 next export -o build/",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

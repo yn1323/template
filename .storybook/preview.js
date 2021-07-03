@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+import '../styles/ionicTheme.css'
+
 import React from 'react'
 import { addDecorator } from '@storybook/react'
 import { IonApp, IonContent, IonPage } from '@ionic/react'
