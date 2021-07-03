@@ -13,8 +13,8 @@ const Template: ComponentStory<typeof Component> = args => (
 )
 
 export const Primary = Template.bind({})
-Primary.args = {
-  primary: true,
-  label: 'Button',
-  size: 'large',
-}
+// Primary.args = {
+//   primary: true,
+//   label: 'Button',
+//   size: 'large'
+// };

@@ -1,7 +1,7 @@
 import { useLocale } from '@hooks'
-import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import PropTypes from 'prop-types'
 
 const Box = styled.div`
   ${tw`bg-orange-500`};
@@ -20,7 +20,6 @@ const Button: React.FC<Props> = ({
   size = 'medium',
   backgroundColor,
   label,
-  ...props
 }) => {
   const { t } = useLocale()
   const baseButton = 'rounded-full font-bold'
@@ -37,7 +36,6 @@ const Button: React.FC<Props> = ({
       <button
         type="button"
         className={`text-white bg-blue-450 ${baseButton} ${sizeMode}`}
-        {...props}
       >
         {label}
       </button>
@@ -48,7 +46,6 @@ const Button: React.FC<Props> = ({
       type="button"
       className={`text-gray-600 bg-transparent shadow-inner ${baseButton} ${sizeMode}`}
       // style={{ backgroundColor }}
-      {...props}
     >
       {label}
     </button>

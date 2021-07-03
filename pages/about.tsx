@@ -1,12 +1,11 @@
-import Button from '@atom/Button'
+import IonicButton from '@atom/IonicButton'
 
-const About = () => {
+const Lists = () => {
   return (
     <div>
-      About dayo
-      <Button label="aaa" primary></Button>
+      about<IonicButton></IonicButton>
     </div>
   )
 }
 
-export default About
+export default Lists
