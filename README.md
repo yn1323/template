@@ -2,7 +2,7 @@
 
 ## Packages
 
-- Next.js
+- Next.js(CSR & SSR)
 - Capacitor
 - Storybook
 - Styled-Component
@@ -11,17 +11,20 @@
 - ESlint (Save on Lint)
 - i18n
 
-## Required
-
-`npm install -g ionic cordova`
-`npm install -g @ionic/cli native-run cordova-res`
-
 ## Start Guide
+
+### Required
+
+- `npm install -g ionic cordova @ionic/cli native-run cordova-res`
+- Android Studio 4.2+
+- Android SDK Settings
 
 ### initialize
 
 ```sh
 npm i --legacy-peer-deps
+
+# Only APK Release
 npm run chmod
 npm run createkey <Alias>
 ```
@@ -34,36 +37,56 @@ npm run createkey <Alias>
 2. Start Storybook
    `npm run storybook`
 
-## i18n Guide
+## i18n
 
-1. locales/en.ts
+1. Modify locales/en.ts
+2. Use Locale
 
-## Application Setting
-
-1. app.json
-
-- Enter ja and en application name
-- Enter extra permission required in capacitor
-
-2. capacitor.config.json  
-   Enter AppId
-
-## Debug
-
-1. Debug in Emulator
-
-`ionic serve`
+```tsx
+import { useLocale } from '@hooks'
+const { t } = useLocale()
+const Component = () => <Box>{t('ボタン！')}</Box>
+```
 
 ## Release
 
-1. Command
+### SSR
 
-```sh
-# ja
-npm run release--android
-# en
-npm run release--android--en
-```
+1. Deploy somewhere
 
-2. Encrypt
+### CSR
+
+1. `npm run csr`
+2. www folder
+
+### Android Apk
+
+#### Config
+
+1. APK Name
+   - app.json
+2. APP ID
+   - capacitor.config.json
+3. Mobile Native Functions
+   - app.json
+
+## Release
+
+1. Release Command
+
+   ```sh
+   # ja
+   npm run release--android
+   # en
+   npm run release--android--en
+   ```
+
+2. Android Studio Build
+
+   1. Build Variants -> android.app: release
+   2. Toolbar Build -> Build Bundle(s) / APK(s) -> BuildAPK(s)
+
+3. Encrypt
    `npm run sign--android <Alias of key>`
+
+4. APK file in ./apk

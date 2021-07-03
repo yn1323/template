@@ -12,7 +12,7 @@ rm -r ./android
 
 echo change capacitor.config.json language
 # change config.xml language
-node ./helper/config.js --lang $1
+node ./bat/config.js --lang $1
 
 echo add platform
 ionic capacitor add android
@@ -22,7 +22,7 @@ ionic cap copy
 ionic cap sync
 
 # edit ANdroidManifest.xml permission
-node ./editAndroidManifest.js
+node ./bat/editAndroidManifest.js
 
 echo open android studio
 echo please build in android studio

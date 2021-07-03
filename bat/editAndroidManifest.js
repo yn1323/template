@@ -7,7 +7,7 @@ const xmlBuilder = new xml2js.Builder()
 
 const { readJson } = require('./common')
 
-const androidManufest = './android/app/src/main/AndroidManifest.xml'
+const androidManufest = '../android/app/src/main/AndroidManifest.xml'
 
 const appInfo = readJson('./app.json')
 const { permissionXML } = appInfo
