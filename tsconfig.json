@@ -2,24 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@helper": [
-        "src/helper"
-      ],
-      "@constant": [
-        "src/constant"
-      ],
-      "@atom/*": [
-        "components/atom/*"
-      ],
-      "@molecule/*": [
-        "components/molecule/*"
-      ],
-      "@organism/*": [
-        "components/organism/*"
-      ],
-      "@template/*": [
-        "components/template/*"
-      ],
+      "@locales/*": ["locales/*"],
+      "@helper": ["src/helper"],
+      "@hooks": ["src/hooks"],
+      "@constant": ["src/constant"],
+      "@atom/*": ["components/atom/*"],
+      "@molecule/*": ["components/molecule/*"],
+      "@organism/*": ["components/organism/*"],
+      "@template/*": ["components/template/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

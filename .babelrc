@@ -1,9 +1,7 @@
 {
-  "presets": [
-    "next/babel"
-  ],
+  "presets": ["next/babel", "react-app"],
   "plugins": [
-  "macros",
+    "macros",
     [
       "styled-components",
       {

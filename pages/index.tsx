@@ -1,9 +1,11 @@
 import Button from '@atom/Button'
+import { useLocale } from '@hooks'
+import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +15,12 @@ export default function Home() {
       </Head>
       <main>
         <Button label="aaaa"></Button>
+        <Link href="/about">
+          <a>About Us</a>
+        </Link>
       </main>
     </div>
   )
 }
+
+export default Home

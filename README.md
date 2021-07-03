@@ -1,7 +1,18 @@
-# Next.js + Capacitor + Storybook + Styled-Component + Tailwind + Ionic Teamplate
+# Next.js + Capacitor
 
+## Packages
+
+- Next.js
+- Capacitor
+- Storybook
+- Styled-Component
+- Tailwind
+- Ionic
+- ESlint (Save on Lint)
+- i18n
 
 ## Installation
+
 `npm i --legacy-peer-deps`
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
