@@ -10,7 +10,13 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Nunito Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+      sans: [
+        'Nunito Sans',
+        'Helvetica Neue',
+        'Helvetica',
+        'Arial',
+        'sans-serif',
+      ],
     },
     boxShadow: {
       inner: 'rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset',
