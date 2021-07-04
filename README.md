@@ -10,6 +10,8 @@
 - Ionic
 - ESlint (Save on Lint)
 - i18n
+- Jest
+- Husky precommit(Jest)
 
 ## Start Guide
 
