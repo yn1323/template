@@ -52,6 +52,17 @@ const { t } = useLocale()
 const Component = () => <Box>{t('ボタン！')}</Box>
 ```
 
+## Test
+
+### Jest
+
+1. Run test
+   `npm run test`
+1. Update snapshot
+   `npm run test:update -t <Component DirectoryName>`
+1. Coverage
+   `npm run test:coverage`
+
 ## Release
 
 ### SSR
