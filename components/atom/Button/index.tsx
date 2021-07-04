@@ -1,3 +1,4 @@
+import React from 'react'
 import { useLocale } from '@hooks'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'

@@ -19,4 +19,6 @@ module.exports = {
     },
   },
   snapshotResolver: '<rootDir>/test/snapshotResolver.js',
+  collectCoverageFrom: ['components/**/*/index.{ts,tsx}'],
+  collectCoverage: true,
 }
