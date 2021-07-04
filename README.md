@@ -115,3 +115,25 @@ const Component = () => <Box>{t('ボタン！')}</Box>
 ### Check KeyName
 
 `npm run checkkey <PW>`
+
+### Use husky in Source Tree
+
+1. Change commit option -> bypass commit hook
+1. Command
+
+   ```sh
+   # bash:
+   echo 'export PATH="/usr/local/bin/:$PATH"' >> ~/.huskyrc
+   echo 'source ~/.bash_profile' >> ~/.huskyrc
+   # zsh:
+   echo 'export PATH="/usr/local/bin/:$PATH"' >> ~/.huskyrc
+   echo 'source ~/.zprofile' >> ~/.huskyrc
+   ```
+
+1. `which npx`
+1. Add `.huskyrc`
+   https://github.com/typicode/husky/issues/639#issuecomment-573281096
+
+### Add Husky Command
+
+https://github.com/typicode/husky/issues/866
