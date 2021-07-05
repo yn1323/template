@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 
 import { RecoilRoot } from 'recoil'
 
@@ -30,15 +29,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   })
   return (
     <RecoilRoot>
-      <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#68d391" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="icons/icon-192x192.png"
-        />
-      </Head>
       <Component {...pageProps} />
     </RecoilRoot>
   )

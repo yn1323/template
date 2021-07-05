@@ -21,8 +21,14 @@ export default class MyDocument extends Document<Props> {
     return (
       <Html lang="ja">
         <Head>
-          <meta charSet="utf-8" />
           {this.props.styleTags}
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#68d391" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="icons/icon-192x192.png"
+          />
         </Head>
         <body>
           <Main />
