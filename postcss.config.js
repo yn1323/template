@@ -1,10 +1,10 @@
-// const purgecss = [
-//   '@fullhuman/postcss-purgecss',
-//   {
-//     content: ['./pages/**/*.tsx', './components/**/*.tsx'],
-//     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-//   },
-// ]
+const purgecss = [
+  '@fullhuman/postcss-purgecss',
+  {
+    content: ['./pages/**/*.tsx', './components/**/*.tsx'],
+    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+  },
+]
 
 module.exports = {
   plugins: [
