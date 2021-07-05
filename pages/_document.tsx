@@ -21,7 +21,6 @@ export default class MyDocument extends Document<Props> {
     return (
       <Html lang="ja">
         <Head>
-          {this.props.styleTags}
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#68d391" />
           <link
@@ -29,6 +28,7 @@ export default class MyDocument extends Document<Props> {
             sizes="180x180"
             href="icons/icon-192x192.png"
           />
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />
