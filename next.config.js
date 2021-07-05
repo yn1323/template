@@ -2,6 +2,7 @@ const withPWA = require('next-pwa')
 
 const isCSR = process.env.csr === '1'
 const lang = process.env.lang ?? 'ja'
+const prod = process.env.NODE_ENV === 'production'
 
 const common = {
   reactStrictMode: true,
@@ -14,11 +15,6 @@ const common = {
       config.resolve.fallback.fs = false
     }
     return config
-  },
-}
-const sw = {
-  pwa: {
-    dest: 'public', // swの出力ディレクトリ
   },
 }
 
@@ -46,4 +42,11 @@ const exportPathMap = isCSR
     }
   : {}
 
-module.exports = withPWA({ ...common, ...i18n, ...exportPathMap, ...sw })
+module.exports = { ...common, ...i18n, ...exportPathMap }
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    disable: prod ? false : true,
+  },
+})

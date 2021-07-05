@@ -22,12 +22,6 @@ export default class MyDocument extends Document<Props> {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="theme-color" content="#68d391" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="icons//icon-192x192.png"
-          />
           {this.props.styleTags}
         </Head>
         <body>
