@@ -44,3 +44,6 @@ android
 
 # StoryBook
 build-storybook/
+
+/public/workbox-*.js
+/public/sw.js
