@@ -132,10 +132,6 @@ const Component = () => <Box>{t('ボタン！')}</Box>
    echo 'source ~/.zprofile' >> ~/.huskyrc
    ```
 
-1. `which npx`
-1. Add `.huskyrc`
-   https://github.com/typicode/husky/issues/639#issuecomment-573281096
-
 ### Add Husky Command
 
 https://github.com/typicode/husky/issues/866
