@@ -17,6 +17,9 @@ const Home = () => {
         <Link href="/about">
           <a>About Us</a>
         </Link>
+        <Link href="/colors">
+          <a>Colors</a>
+        </Link>
       </main>
     </div>
   )

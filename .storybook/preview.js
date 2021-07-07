@@ -1,43 +1,24 @@
-import '../styles/globals.css'
-import '../styles/ionicTheme.css'
-
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles'
 import React from 'react'
-import { addDecorator } from '@storybook/react'
-import { IonApp, IonContent, IonPage } from '@ionic/react'
-
-/* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css'
-
-/* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css'
-import '@ionic/react/css/structure.css'
-import '@ionic/react/css/typography.css'
-
-/* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css'
-import '@ionic/react/css/float-elements.css'
-import '@ionic/react/css/text-alignment.css'
-import '@ionic/react/css/text-transformation.css'
-import '@ionic/react/css/flex-utils.css'
-import '@ionic/react/css/display.css'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../src/constant/theme'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
 }
 
-const IonWrapper = ({ children }) => {
+const withThemeProvider = (Story, context) => {
   return (
-    <IonApp>
-      <IonPage>
-        <IonContent>{children}</IonContent>
-      </IonPage>
-    </IonApp>
+    <StylesProvider injectFirst>
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Story {...context} />
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </StylesProvider>
   )
 }
-addDecorator(storyFn => <IonWrapper>{storyFn()}</IonWrapper>)
+export const decorators = [withThemeProvider]

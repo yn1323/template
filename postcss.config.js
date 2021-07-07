@@ -11,7 +11,6 @@ module.exports = {
     'postcss-import',
     'tailwindcss',
     'autoprefixer',
-    // Prevent delete ionic-css
-    // ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
+    ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
   ],
 }
