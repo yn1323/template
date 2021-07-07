@@ -1,11 +1,5 @@
-import IonicButton from '@atom/IonicButton'
-
 const Lists = () => {
-  return (
-    <div>
-      about<IonicButton></IonicButton>
-    </div>
-  )
+  return <div>about</div>
 }
 
 export default Lists
