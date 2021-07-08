@@ -28,7 +28,8 @@
 ### initialize
 
 ```sh
-npm i --legacy-peer-deps
+npm i
+npx husky-init
 
 # Only APK Release
 npm run chmod
