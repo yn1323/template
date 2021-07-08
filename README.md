@@ -16,7 +16,7 @@
 
 ### Install from degit
 
-`npx degit yn1323/materialui-next <app-name>`
+`npx degit yn1323/template#materialui-next <app-name>`
 
 ### initialize
 
