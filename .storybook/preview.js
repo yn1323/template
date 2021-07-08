@@ -20,6 +20,7 @@ import '@ionic/react/css/text-alignment.css'
 import '@ionic/react/css/text-transformation.css'
 import '@ionic/react/css/flex-utils.css'
 import '@ionic/react/css/display.css'
+import * as nextImage from 'next/image'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -41,3 +42,10 @@ const IonWrapper = ({ children }) => {
   )
 }
 addDecorator(storyFn => <IonWrapper>{storyFn()}</IonWrapper>)
+                                     
+                                     // Next.jsのimgを上書き
+nextImage
+Object.defineProperty(nextImage, 'default', {
+  configurable: true,
+  value: props => <img {...props} />,
+})
