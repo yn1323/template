@@ -20,7 +20,8 @@
 
 ### initialize
 
-`npm i --legacy-peer-deps`
+`npm i`
+`npx husky-init`
 
 ## Development Guide
 
