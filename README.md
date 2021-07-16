@@ -49,7 +49,7 @@ const Component = () => <Box>{t('ボタン！')}</Box>
 1. Run test
    `npm run test`
 1. Update snapshot
-   `npm run test:update -t <Component DirectoryName>`
+   `npm run test -u <Component DirectoryName>`
 1. Coverage
    `npm run test:coverage`
 
