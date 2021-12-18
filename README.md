@@ -26,3 +26,6 @@
 
 ### Next.js MaterialUI(For Browser)
 `npx degit yn1323/template#materialui-next <app-name>`
+
+### Simle Linters HTML x CSS x JavaScript
+`npx degit yn1323/template#simple-linters <app-name>`
