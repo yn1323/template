@@ -29,3 +29,6 @@
 
 ### Simle Linters HTML x CSS x JavaScript
 `npx degit yn1323/template#simple-linters <app-name>`
+
+### MonoRepo Next.js x NestJS
+`npx degit yn1323/template#MonoRepoNestxNest <app-name>`
