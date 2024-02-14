@@ -1,0 +1,30 @@
+name: storybook_test_common
+description: Run storybook test
+
+inputs:
+  G_TOKEN:
+    description: "github token"
+    required: true
+  CHROMATIC_PROJECT_TOKEN:
+    description: "chromatic token"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Use Node.js v20
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20.x"
+    - name: Install dependencies
+      run: pnpm i
+      shell: bash
+    # - name: Move MSW file
+    #   run: mv public/mockServiceWorker.js storybook-static
+    #   shell: bash
+    - name: Publish to Chromatic
+      uses: chromaui/action@v10
+      with:
+        token: ${{ inputs.G_TOKEN }}
+        projectToken: ${{ inputs.CHROMATIC_PROJECT_TOKEN }}
+        storybookBuildDir: storybook-static
