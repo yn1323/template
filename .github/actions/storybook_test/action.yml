@@ -1,0 +1,51 @@
+name: storybook_test_common
+description: Run storybook test
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      with:
+        version: 8
+        run_install: false
+    - name: Get pnpm store directory
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+    - uses: actions/cache@v3
+      name: Setup pnpm cache
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+    - name: Install dependencies
+      run: pnpm i
+      shell: bash
+      # https://github.com/swc-project/swc/issues/5616
+      # TODO: GitHub actionsのswc/coreのみをインストールする
+    - name: Install swc
+      shell: bash
+      run: |
+        npm install --save-optional \
+         "@swc/core-linux-arm-gnueabihf" \
+         "@swc/core-linux-arm64-gnu" \
+         "@swc/core-linux-arm64-musl" \
+         "@swc/core-linux-x64-gnu" \
+         "@swc/core-linux-x64-musl"
+    - name: 'Create env file'
+      shell: bash
+      run: |
+        touch .env
+        echo EXAMPLE="hoge" >> .env
+    - name: Build storybook
+      run: pnpm storybook:build
+      shell: bash
+    - name: Storybook test
+      run: pnpm storybook:test-ci
+      shell: bash
