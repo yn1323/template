@@ -27,8 +27,11 @@
 ### Next.js MaterialUI(For Browser)
 `npx degit yn1323/template#materialui-next <app-name>`
 
-### Simle Linters HTML x CSS x JavaScript
+### Simple Linters HTML x CSS x JavaScript
 `npx degit yn1323/template#simple-linters <app-name>`
 
 ### MonoRepo Next.js x NestJS
 `npx degit yn1323/template#MonoRepoNestxNest <app-name>`
+
+### Next.js App Router x Storybook x Playwright
+`npx degit yn1323/template#next-app-router <app-name>`
