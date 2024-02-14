@@ -27,6 +27,9 @@ runs:
     - name: Install dependencies
       run: pnpm i
       shell: bash
+    - name: Install playwright
+      run: pnpm exec playwright install
+      shell: bash
       # https://github.com/swc-project/swc/issues/5616
       # TODO: GitHub actionsのswc/coreのみをインストールする
     - name: Install swc
