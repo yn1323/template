@@ -40,6 +40,9 @@ devDependencies:
   '@chakra-ui/storybook-addon':
     specifier: 5.0.1
     version: 5.0.1(@chakra-ui/react@2.8.2)(@storybook/components@7.6.15)(@storybook/manager-api@7.6.15)(@storybook/preview-api@7.6.15)(@storybook/types@7.6.15)(react-dom@18.2.0)(react@18.2.0)
+  '@playwright/test':
+    specifier: ^1.41.2
+    version: 1.41.2
   '@storybook/addon-essentials':
     specifier: ^7.6.15
     version: 7.6.15(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
@@ -76,9 +79,6 @@ devDependencies:
   '@types/react-dom':
     specifier: ^18
     version: 18.2.19
-  playwright-chromium:
-    specifier: ^1.41.2
-    version: 1.41.2
   storybook:
     specifier: ^7.6.15
     version: 7.6.15
@@ -3348,6 +3348,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@playwright/test@1.41.2:
+    resolution: {integrity: sha512-qQB9h7KbibJzrDpkXkYvsmiDJK14FULCCZgEcoe2AvFAS64oCirWTwzTlAYEbKaRxWs5TFesE1Na6izMv3HfGg==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dependencies:
+      playwright: 1.41.2
+    dev: true
 
   /@pmmmwh/react-refresh-webpack-plugin@0.5.11(react-refresh@0.14.0)(webpack@5.90.1):
     resolution: {integrity: sha512-7j/6vdTym0+qZ6u4XbSAxrWBGYSdCfTzySkj7WAFgDLmSyWlOrWvpyzxlFh5jtw9dn0oL/jtW+06XfFiisN3JQ==}
@@ -10441,15 +10449,6 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       find-up: 6.3.0
-    dev: true
-
-  /playwright-chromium@1.41.2:
-    resolution: {integrity: sha512-1XoW4aGGRbS2BJLldtLcv2QW3deMv8myE5iCtfGRPq99BWqmBLJvJTgY/SyfBCoklwQvl91zUWYWHjCAuvKGkw==}
-    engines: {node: '>=16'}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      playwright-core: 1.41.2
     dev: true
 
   /playwright-core@1.41.2:
