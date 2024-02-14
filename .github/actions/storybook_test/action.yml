@@ -32,7 +32,7 @@ runs:
     - name: Install swc
       shell: bash
       run: |
-        npm install --save-optional \
+        pnpm install -D \
          "@swc/core-linux-arm-gnueabihf" \
          "@swc/core-linux-arm64-gnu" \
          "@swc/core-linux-arm64-musl" \
