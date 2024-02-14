@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "biome lint ./app ./components ./constants ./hooks ./helpers",
     "storybook": "storybook dev -p 6006",
-    "storybook:test": "test-storybook",
+    "storybook:test": "test-storybook(https://github.com/storybookjs/test-runner/issues/338)",
     "storybook:build": "storybook build",
     "storybook:test-ci": "npx concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"pnpm dlx http-server storybook-static --port 6006 --silent\" \"pnpm dlx wait-on tcp:127.0.0.1:6006 && pnpm storybook:test\"",
     "e2e": "playwright test",
